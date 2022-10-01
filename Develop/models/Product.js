@@ -25,7 +25,7 @@ Product.init(
       // TODO: validate that the value is a decimal
       // is this correct syntax?
       validate: {
-        isDecimal: true
+        decimalNumbers: true
       }
     },
     stock: {
@@ -33,7 +33,8 @@ Product.init(
       allowNull: false,
       defaultValue: 10,
             validate: {
-        isDecimal: true
+              // correct syntax?
+        numericNumbers: true
       }
     },
     category_id: {

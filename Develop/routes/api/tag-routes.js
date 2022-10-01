@@ -18,9 +18,9 @@ router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
   try {
-    const tagData = await Traveller.findByPk(req.params.id, {
+    const tagData = await Tag.findByPk(req.params.id, {
    
-      // include: [{ model: Location, through: Trip, as: 'planned_trips' }]
+      // include: [{ model: Tag, through: Product, as: '' }]
     });
 
     if (!tagData) {
